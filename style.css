@@ -1,0 +1,311 @@
+@font-face {
+    font-family: "Font";
+    src: url(./conference-ticket-generator-main/assets/fonts/Font.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Font" ;
+    color: #FFFFFF;
+}
+
+html,body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url(./conference-ticket-generator-main/assets/images/background-desktop.png);
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./conference-ticket-generator-main/assets/images/pattern-lines.svg);
+    z-index: 1;
+}
+
+.pattern-squiggly-line-top {
+    position: absolute;
+    top: 0;
+    left: 1120px;
+    width: 100%;
+    height: 100%;
+    background: url(./conference-ticket-generator-main/assets/images/pattern-squiggly-line-top.svg);
+    background-repeat: no-repeat;
+    background-size: 800px
+
+}
+
+.pattern-squiggly-line-bottom {
+    position: absolute;
+    top: 475px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    background: url(./conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom.svg);
+    background-repeat: no-repeat;
+    /* background-size: 800px  */
+}
+
+.ticket-generator {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin-top: 3rem;
+    z-index: 99;
+}
+
+.logo-image img {
+    margin-bottom: 2rem;
+}
+
+.upload-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #c0cad3;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+.heading h1 {
+    max-width: 1300px;
+    width: 100%;
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.heading p {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: #9AA6B2;
+    margin-bottom: 2rem;
+}
+
+form .upload-container {
+    max-width: 500px;
+    width: 100%;
+    /* height: 100%; */
+    border: 1px dashed #9AA6B2;
+    border-radius: 20px;
+    /* padding: 20px; */
+    object-fit: cover;
+    overflow: hidden;
+    background-color: rgba(176, 176, 255, 0.027);
+    margin: 1rem 0;
+}
+
+.upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.upload-container img {
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+
+.upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.upload-box .upload-text {
+    color: #9AA6B2;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.upload-note {
+    margin: 1rem 0;
+    color: #9AA6B2;
+}
+
+.name-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: #c0cad3;
+}
+
+.name-container input {
+    width: 100%;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 0.5rem 0 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+
+.email-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: #c0cad3;
+    
+}
+
+.email-container input {
+    width: 100%;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 0.5rem 0 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+
+
+.email-container:-webkit-autofill {
+    background-color: #1a1a2e !important; /* Match the container color */
+    -webkit-text-fill-color: #ffffff !important; /* Match text color */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.github-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: #c0cad3;
+}
+
+.github-username input {
+    width: 100%;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 0.5rem 0 1.5rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.submitting-button {
+    width: 100%;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    color: #050221;
+    background-color: #F67464;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.ticket-bar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: url('./conference-ticket-generator-main/assets/images/pattern-ticket.svg') no-repeat center/contain;
+    width: 600px;
+    height: 450px;
+    padding: 40px;
+}
+
+.ticket-content {
+    position: relative;
+    top: 100px;
+}
+
+.user-headings h1 img {
+    width: 350px;
+    margin-bottom: 0.5rem;
+}
+
+.user-headings p {
+    padding-left: 70px;
+}
+
+.user-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.user-content {
+    position: relative;
+    margin-top: 20px;
+    margin-left: -3px;
+    /* top: 30; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.side-content {
+    margin: 0 20px;
+}
+
+.side-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.user-img {
+    width: 70px;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.back-button {
+    position: absolute;
+    top: 390px;
+    left: 100px;
+    border: none;
+    border-radius: 8px;
+    z-index: 100000;
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 10px 130px;
+    margin: 10px 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+    background-color: rgb(21, 21, 58);
+}
+
